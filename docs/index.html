@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NoNeedConcept</title>
+  <meta name="description" content="Small, solid .NET libraries. No framework on top, no concept to learn first.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;800&family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --signal: #EC3013;
+      --signal-deep: #AE1800;
+      --ink: #201E1D;
+      --paper: #F3F2F2;
+      --slate: #5B6165;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Archivo', system-ui, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #F3F2F2;
+        --paper: #201E1D;
+        --signal-deep: #FFC4B8;
+        --slate: #9EA2A5;
+      }
+    }
+
+    main {
+      flex: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 16px 48px;
+      width: 100%;
+    }
+
+    .mark {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .mark svg {
+      width: 80px;
+      height: 80px;
+      flex-shrink: 0;
+    }
+
+    .wordmark {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .wordmark .noneed { color: var(--ink); }
+    .wordmark .concept { color: var(--signal); }
+
+    .tagline {
+      font-family: 'Archivo', sans-serif;
+      font-size: 16px;
+      color: var(--slate);
+      margin-top: 6px;
+    }
+
+    .tagline s { color: var(--signal); text-decoration-color: var(--signal); }
+
+    .intro {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 48px;
+      max-width: 540px;
+    }
+
+    h2 {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 800;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--slate);
+      margin-bottom: 16px;
+    }
+
+    .projects {
+      margin-bottom: 48px;
+    }
+
+    .project {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 2px solid var(--signal);
+    }
+
+    .project:last-child { border-bottom: none; }
+
+    .part-number {
+      font-family: monospace;
+      font-size: 13px;
+      color: var(--slate);
+      flex-shrink: 0;
+      width: 56px;
+    }
+
+    .project-name a {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      color: var(--signal-deep);
+      text-decoration: none;
+    }
+
+    .project-name a:hover { text-decoration: underline; }
+
+    .project-desc {
+      font-size: 14px;
+      color: var(--slate);
+      margin-left: auto;
+      text-align: right;
+    }
+
+    @media (max-width: 540px) {
+      .project {
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+      .project-desc {
+        margin-left: 72px;
+        text-align: left;
+        width: 100%;
+      }
+    }
+
+    .links {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .links a {
+      font-size: 14px;
+      color: var(--signal-deep);
+      text-decoration: none;
+    }
+
+    .links a:hover { text-decoration: underline; }
+
+    footer {
+      padding: 24px 16px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--slate);
+      border-top: 2px solid var(--signal);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="mark">
+      <svg viewBox="0 0 100 100" width="100" height="100">
+        <rect width="100" height="100" fill="var(--signal)"/>
+        <path fill="var(--paper)" d="M28.33 32.87Q28.33 32.61 28.51 32.43Q28.68 32.25 28.94 32.25L28.94 32.25L34.89 32.25Q35.15 32.25 35.33 32.43Q35.51 32.61 35.51 32.87L35.51 32.87L35.51 67.54Q35.51 67.80 35.33 67.98Q35.15 68.16 34.89 68.16L34.89 68.16L28.12 68.16Q27.61 68.16 27.45 67.65L27.45 67.65L21.09 47.79Q21.04 47.64 20.91 47.67Q20.78 47.69 20.78 47.85L20.78 47.85L20.84 67.54Q20.84 67.80 20.66 67.98Q20.48 68.16 20.22 68.16L20.22 68.16L14.27 68.16Q14.01 68.16 13.83 67.98Q13.65 67.80 13.65 67.54L13.65 67.54L13.65 32.87Q13.65 32.61 13.83 32.43Q14.01 32.25 14.27 32.25L14.27 32.25L20.99 32.25Q21.50 32.25 21.66 32.76L21.66 32.76L28.07 52.62Q28.12 52.77 28.25 52.74Q28.38 52.72 28.38 52.56L28.38 52.56L28.33 32.87ZM54.69 32.87Q54.69 32.61 54.87 32.43Q55.05 32.25 55.31 32.25L55.31 32.25L61.26 32.25Q61.52 32.25 61.70 32.43Q61.88 32.61 61.88 32.87L61.88 32.87L61.88 67.54Q61.88 67.80 61.70 67.98Q61.52 68.16 61.26 68.16L61.26 68.16L54.49 68.16Q53.98 68.16 53.82 67.65L53.82 67.65L47.46 47.79Q47.41 47.64 47.28 47.67Q47.15 47.69 47.15 47.85L47.15 47.85L47.20 67.54Q47.20 67.80 47.02 67.98Q46.85 68.16 46.59 68.16L46.59 68.16L40.64 68.16Q40.38 68.16 40.20 67.98Q40.02 67.80 40.02 67.54L40.02 67.54L40.02 32.87Q40.02 32.61 40.20 32.43Q40.38 32.25 40.64 32.25L40.64 32.25L47.36 32.25Q47.87 32.25 48.02 32.76L48.02 32.76L54.44 52.62Q54.49 52.77 54.62 52.74Q54.75 52.72 54.75 52.56L54.75 52.56L54.69 32.87Z"/>
+        <path fill="none" stroke="var(--paper)" stroke-width="1.2" d="M76.09 68.57Q71.47 68.57 68.67 65.83Q65.88 63.08 65.88 58.46L65.88 58.46L65.88 41.84Q65.88 37.28 68.67 34.56Q71.47 31.84 76.09 31.84L76.09 31.84Q80.75 31.84 83.55 34.56Q86.35 37.28 86.35 41.84L86.35 41.84L86.35 42.41Q86.35 42.66 86.17 42.84Q85.99 43.02 85.73 43.02L85.73 43.02L79.73 43.28Q79.11 43.28 79.11 42.72L79.11 42.72L79.11 41.38Q79.11 39.89 78.29 38.97Q77.47 38.05 76.09 38.05L76.09 38.05Q74.75 38.05 73.93 38.97Q73.11 39.89 73.11 41.38L73.11 41.38L73.11 59.08Q73.11 60.57 73.93 61.47Q74.75 62.36 76.09 62.36L76.09 62.36Q77.47 62.36 78.29 61.47Q79.11 60.57 79.11 59.08L79.11 59.08L79.11 57.70Q79.11 57.44 79.29 57.26Q79.47 57.08 79.73 57.08L79.73 57.08L85.73 57.34Q85.99 57.34 86.17 57.52Q86.35 57.70 86.35 57.95L86.35 57.95L86.35 58.46Q86.35 63.08 83.52 65.83Q80.70 68.57 76.09 68.57L76.09 68.57Z"/>
+      </svg>
+      <div>
+        <div class="wordmark"><span class="noneed">NONEED</span><span class="concept">CONCEPT</span></div>
+        <div class="tagline"><s>Concept</s> Code.</div>
+      </div>
+    </div>
+
+    <p class="intro">
+      Small, solid .NET libraries. No framework on top, no concept to learn first. Mostly Akka.NET, C# and Go.
+    </p>
+
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <span class="part-number">NNC/01</span>
+        <span class="project-name"><a href="https://github.com/NoNeedConcept/Akka.Pathfinder">Akka.Pathfinder</a></span>
+        <span class="project-desc">Pathfinding with Akka.NET actors</span>
+      </div>
+      <div class="project">
+        <span class="part-number">NNC/02</span>
+        <span class="project-name"><a href="https://github.com/st0o0/terp">terp</a></span>
+        <span class="project-desc">Host setups, startup gates, Akka.NET helpers</span>
+      </div>
+      <div class="project">
+        <span class="part-number">NNC/03</span>
+        <span class="project-name"><a href="https://github.com/NoNeedConcept/moin.akka.endpoint">moin.akka.endpoint</a></span>
+        <span class="project-desc">Akka.NET endpoint abstractions</span>
+      </div>
+    </div>
+
+    <h2>Links</h2>
+    <div class="links">
+      <a href="https://github.com/NoNeedConcept">GitHub</a>
+      <a href="https://terp.noneedconcept.org">terp docs</a>
+    </div>
+  </main>
+
+  <footer>NoNeedConcept</footer>
+</body>
+</html>
