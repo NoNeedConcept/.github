@@ -5,14 +5,14 @@
 
 &nbsp;
 
-~~Concept~~ Code. Small, solid .NET libraries. No framework on top, no concept to learn first.
+~~Concept~~ Code. .NET libraries and actor-driven solvers, from host setups to pathfinding.
 
 ## Projects
 
 | # | Project | What it is |
 |---|---------|------------|
 | NNC/01 | [Akka.Pathfinder](https://github.com/NoNeedConcept/Akka.Pathfinder) | Pathfinding with Akka.NET actors |
-| NNC/02 | [terp](https://github.com/st0o0/terp) | Host setups, startup gates, metrics helpers, backoff and Akka.NET helpers. [Docs](https://terp.noneedconcept.org) |
+| NNC/02 | [terp](https://github.com/NoNeedConcept/terp) | Host setups, startup gates, metrics helpers, backoff and Akka.NET helpers. [Docs](https://terp.noneedconcept.org) |
 | NNC/03 | [moin.akka.endpoint](https://github.com/NoNeedConcept/moin.akka.endpoint) | Akka.NET endpoint abstractions |
 
 ## Brand
